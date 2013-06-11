@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  party_size: 1
+  user_id: 1
+  datetime: 2013-06-10 16:01:52
+
+two:
+  party_size: 1
+  user_id: 1
+  datetime: 2013-06-10 16:01:52

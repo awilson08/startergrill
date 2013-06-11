@@ -1,0 +1,24 @@
+<%= render "shared/nav" %>
+
+<table>
+  <tr>
+  	<th>ID</th>
+    <th>Date/Time</th>
+    <th>Party Size</th>
+    <th> User </th>
+    <th></th>
+    <th></th>
+  </tr>
+
+
+  <tr>
+  	<td><%= @reservation.id %></td>
+    <td><%= @reservation.datetime %></td>
+    <td><%= @reservation.party_size %></td>
+    <td><%= link_to 'Show', @reservation %></td>
+    <td><%= link_to 'Edit', edit_reservation_path(@reservation) %></td>
+    <td><%= link_to 'Destroy', @reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+
+</table>
+

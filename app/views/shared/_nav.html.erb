@@ -1,0 +1,23 @@
+
+
+<font face="verdana" color="Blue"><h1> Starter Grill </h1></font>
+
+<p><%= link_to "Home", home_url %>	|	
+	<%= link_to "Menu", menu_url %>	|	
+	<%= link_to "Location", location_url %>	|
+	<%= link_to "Reservations", reservations_url %>	|
+	<%= link_to "Online Ordering", orders_url %>	|
+	<%= link_to "Help", help_url %> 
+	
+
+
+	<% if current_user %>
+     | <%= link_to "Profile", current_user %>
+     | <%= link_to "Sign Out", session_url, method: 'delete' %>
+    <% else %>
+     | <%= link_to "Sign In", new_session_url %>
+	 | <%= link_to "Sign Up", new_user_url %>	
+ 	<% end %>
+</p>
+
+<hr>

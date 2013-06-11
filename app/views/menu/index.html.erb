@@ -1,0 +1,47 @@
+<%= render "shared/nav" %>
+
+<table>
+
+<td>
+<br><br>
+ <%= image_tag("appetizer.jpg", :size => "200x200") %>  <br><br>
+ <%= image_tag("entree.jpg", :size => "200x200") %> <br><br><br>
+ <%= image_tag("drinks.jpg", :size => "200x200") %> <br>
+ <%= image_tag("desserts.jpg", :size => "200x200") %> 
+</td>
+
+
+<td>
+<h2> Starters </h2>
+<% @appetizers.each do |appetizer| %>
+	<b>$<%= appetizer.price %> <%= appetizer.name %> </b> <br>
+	 <%= appetizer.description %>  
+	 <br><br>
+
+<%end%>
+
+<h2> Entrees </h2>
+<% @entrees.each do |entree| %>
+	<b>$<%= entree.price %> <%= entree.name %> </b> <br>
+	 <%= entree.description %>  
+	 <br><br>
+
+<%end%>
+
+<h2> Drinks </h2>
+<% @drinks.each do |drink| %>
+	<b>$<%= drink.price %> <%= drink.name %> </b> <br>
+	 <%= drink.description %>  
+	 <br><br>
+<%end%>
+
+<h2> Desserts </h2>
+<% @desserts.each do |dessert| %>
+	<b>$<%= dessert.price %> <%= dessert.name %> </b> <br>
+	 <%= dessert.description %>  
+	 <br><br>
+
+<%end%>
+</td>
+
+</table>

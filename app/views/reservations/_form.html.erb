@@ -1,0 +1,44 @@
+<%= form_for (@reservation) do |f| %>
+	<% if @reservation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reservation.errors.count, "error") %> prohibited this reservation from being saved:</h2>
+
+      <ul>
+      <% @reservation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "Date/Time"%> 
+   <br />
+
+
+    <%= f.date_select 	:datetime, :order => [:month, :day, :year], 
+    					:start_year => Time.now.year, 
+    					:end_year => (Time.now.year + 1)
+    %>
+
+    <%= f.time_select  :datetime, :as=>:select, :collection => (16..23),
+                  :minute_step => 60,
+                  :ampm => true %>
+
+
+  </div>
+
+  <div class="field">
+    <%= f.label "Party Size" %> 
+  <br/>
+    <%= f.select :party_size, (2..20) %>
+
+  </div>
+
+
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

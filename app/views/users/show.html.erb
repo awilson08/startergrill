@@ -1,0 +1,21 @@
+<%= render "shared/nav" %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+
+
+<p>
+  <b>Loyalty Points:</b>
+  <%= @user.loyalty_points %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %>

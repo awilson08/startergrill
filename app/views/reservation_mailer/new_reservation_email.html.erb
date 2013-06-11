@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Welcome to StarterGrill.com, <%= @user.name %></h1>
+    <p>
+      You have successfully created a new reservation,
+      your reservation has been made for: <%= @reservation.datetime %> for a party of: <%= @reservation.party_size %>.
+      <br/>
+    </p>
+    <p>
+      To login to the site, just follow this link: <%= @url %>.
+
+    </p>
+    <p>Thanks and have a great day!</p>
+  </body>
+</html>
